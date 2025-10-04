@@ -1,4 +1,3 @@
-<!-- components/PeopleInput.vue -->
 <template>
   <div class="w-full">
     <label class="mb-2 block text-xs font-medium text-gray-800">Number of People</label>

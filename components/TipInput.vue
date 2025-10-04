@@ -1,4 +1,3 @@
-<!-- components/TipInput.vue -->
 <template>
   <div class="w-full">
     <label class="mb-2 block text-xs font-medium text-gray-800">Bill</label>
