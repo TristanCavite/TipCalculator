@@ -2,7 +2,7 @@
 <template>
   <div class="w-full">
     <label class="mb-2 block text-xs font-medium text-gray-800">Number of People</label>
-    <div class="relative rounded-lg bg-[#F7FDFC]">
+    <div class="relative rounded-lg bg-[#E8F7F6]">
       <User class="pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-teal-600" />
       <input
         :value="local"
