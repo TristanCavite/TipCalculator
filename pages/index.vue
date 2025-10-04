@@ -5,6 +5,7 @@
     >
       <div class="space-y-6">
         <TipInput v-model="bill" />
+        <TipSelector v-model="tipPercent" />
         <PeopleInput v-model="people" />
       </div>
     </div>
@@ -12,21 +13,8 @@
 </template>
 
 <script setup lang="ts">
-  import { calculateTip } from "@/lib/tip";
-  import { computed, ref } from "vue";
+  import { useTipCalculator } from "@/composables/useTipCalculator";
+  import { provide } from "vue";
 
-  const bill = ref(0);
-  const tipPercent = ref(0);
-  const people = ref(1);
-
-  const calc = computed(() =>
-    calculateTip({ bill: bill.value, tipPercent: tipPercent.value, people: people.value })
-  );
-  const isZero = computed(() => calc.value.tipAmount === 0 && calc.value.total === 0);
-
-  function reset() {
-    bill.value = 0;
-    tipPercent.value = 0;
-    people.value = 1;
-  }
+  const { bill, tipPercent, people } = useTipCalculator({ tipPercent: 5 });
 </script>
